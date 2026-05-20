@@ -3,9 +3,9 @@ Contributors: dartiss
 Donate link: https://artiss.blog/donate
 Tags: draft, list, scheduled, SEO, widget
 Requires at least: 4.6
-Tested up to: 6.9
+Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 2.6.3
+Stable tag: 2.6.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 README revision: 1.0
@@ -130,6 +130,10 @@ Please report security bugs found in the source code of the undefined plugin thr
 == Changelog ==
 
 I use semantic versioning, with the first release being 1.0.
+
+= 2.6.4 = 
+
+* Enhancement: Fixed a reported vulnerability ([CVE-2026-9104](https://www.cve.org/CVERecord?id=CVE-2026-9104)), reported to me by [manop55555](https://github.com/manop55555) and then by [WordFence](https://www.wordfence.com/r/26c227ba3ee33458/). This fixes a Stored Cross-Site Scripting vulnerability
 
 = 2.6.3 =
 
@@ -280,5 +284,5 @@ I use semantic versioning, with the first release being 1.0.
 
 == Upgrade Notice ==
 
-= 2.6.3 =
+= 2.6.4 =
 * Fixed a reported security vulnerability

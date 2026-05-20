@@ -386,12 +386,13 @@ function draft_list_generate_code( $list_limit = '', $list_type = '', $list_orde
 
 					// Replace the draft tag.
 					if ( '' !== $draft_title ) {
-						$draft = $draft_title;
+						$draft = esc_html( $draft_title );
 					} else {
-						$draft = __( '(no title)', 'simple-draft-list' );
+						$draft = esc_html__( '(no title)', 'simple-draft-list' );
 					}
 					if ( $can_edit ) {
-						$draft = '<a href="' . home_url() . '/wp-admin/post.php?post=' . $post_id . '&action=edit" rel="nofollow">' . esc_html( $draft ) . '</a>';
+						$edit_url = esc_url( admin_url( 'post.php?post=' . absint( $post_id ) . '&action=edit' ) );
+						$draft    = '<a href="' . $edit_url . '" rel="nofollow">' . $draft . '</a>';
 					}
 					$this_line = str_replace( '{{draft}}', $draft, $this_line );
 
